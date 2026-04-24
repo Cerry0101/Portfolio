@@ -1,0 +1,295 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0b0b0b;
+color:white;
+font-family:"Courier New", monospace;
+display:flex;
+justify-content:center;
+padding:30px;
+}
+
+/* CONTAINER */
+.container{
+width:100%;
+max-width:1000px;
+border:2px solid #888;
+background:#111;
+}
+
+/* HEADER */
+.header{
+background:linear-gradient(to right, #6a5acd, #2c2c54);
+padding:15px;
+border-bottom:2px solid #888;
+}
+
+.header h1{
+font-size:24px;
+}
+
+/* GRID */
+.main{
+  display:grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap:15px;
+  padding:15px;
+  align-items: stretch; /* 🔥 isso resolve */
+}
+
+/* PERSONAGEM */
+.character{
+  border:1px solid #888;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent; /* tira o preto */
+}
+
+.character img{
+  width:100%;
+  height:100%;
+  object-fit:cover; /* preenche sem distorcer */
+}
+
+/* STATS */
+.stat{
+  background:#1f3d1f;
+  padding:13px;
+  border:1px solid #00ff88;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:16px;
+}
+
+.stat span{
+  color:#00ff88;
+  min-width:80px;   /* força alinhamento */
+  text-align:right; /* deixa todos alinhados */
+}
+
+/* SKILLS */
+.skills{
+  border:1px solid #888;
+  padding:12px;
+  background:#2a1f2a;
+  width:100%;
+  height:100%; /* 🔥 importante */
+  box-sizing: border-box;
+}
+
+.skills p{
+padding:8px;
+border-bottom:1px solid rgba(255,255,255,0.2);
+cursor:pointer;
+transition:0.2s;
+}
+
+.skills p:last-child{
+border:none;
+}
+
+.skills p:hover{
+background:white;
+color:black;
+transform:translateX(5px);
+}
+
+/* TOOLS */
+.tools{
+border-top:2px solid #888;
+padding:15px;
+background:#1a1a1a;
+}
+
+.tools h2{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.tool-list p{
+padding:6px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+font-size:14px;
+}
+
+.tools ul {
+  padding-left: 20px;
+}
+
+/* CONTATO */
+.contact{
+border-top:2px solid #888;
+padding:15px;
+background:#121212;
+}
+
+.contact h2{
+margin-bottom:10px;
+}
+
+.icons{
+display:flex;
+gap:20px;
+font-size:14px;
+}
+
+.icons a {
+  color: white;           /* muda a cor do texto */
+  text-decoration: none;  /* tira o sublinhado */
+}
+
+.icons span{
+cursor:pointer;
+transition:0.2s;
+}
+
+.icons span:hover{
+color:#00ffcc;
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:10px;
+border-top:2px solid #888;
+font-size:12px;
+opacity:0.6;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px){
+
+  body{
+    padding:15px;
+  }
+
+  /* GRID vira coluna */
+  .main{
+    grid-template-columns: 1fr;
+  }
+
+  /* imagem menor */
+  .character{
+    height:250px;
+  }
+
+  /* stats ocupa tudo */
+  .stats{
+    width:100%;
+  }
+
+  /* skills normal */
+  .skills{
+    height:auto;
+  }
+
+  /* contato quebra linha */
+  .icons{
+    flex-wrap: wrap;
+    gap:10px;
+  }
+
+}
+
+@media (max-width: 480px){
+
+  .header h1{
+    font-size:18px;
+  }
+
+  .stat{
+    font-size:14px;
+    padding:10px;
+  }
+
+  .skills p{
+    font-size:14px;
+  }
+
+  .icons{
+    font-size:12px;
+  }
+
+}
+/* BOTÃO VOLTAR */
+.back-btn{
+  display:inline-block;
+  margin-bottom:8px;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+  border:1px solid #888;
+  padding:5px 10px;
+  transition:0.2s;
+}
+
+.back-btn:hover{
+  background:white;
+  color:black;
+}
+
+/* ÁREA PROFESSORA */
+.teacher-area{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* IMAGEM */
+.professora-img{
+  position:relative;
+  width:300px;
+}
+
+.professora-img img{
+  width:100%;
+  display:block;
+}
+
+/* PUPILAS */
+.pupila{
+  width:15px;
+  height:15px;
+  background:black;
+  border-radius:50%;
+  position:absolute;
+  transition:0.05s;
+}
+
+/* AJUSTE MANUAL (IMPORTANTE) */
+#p1{
+  top:110px;
+  left:90px;
+}
+
+#p2{
+  top:110px;
+  left:170px;
+}
+
+/* TEXTO */
+.teacher-info{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:10px;
+}
+
+/* RESPONSIVO */
+@media (max-width:768px){
+
+  .main{
+    grid-template-columns:1fr;
+  }
+
+  .professora-img{
+    width:200px;
+  }
+
+}
