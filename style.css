@@ -1,3 +1,5 @@
+
+/*CSS DO INDEX*/
 *{
 margin:0;
 padding:0;
@@ -234,7 +236,19 @@ opacity:0.6;
   color:black;
 }
 
-/* ÁREA PROFESSORA */
+/*CSS DA ABA PROFESSORA*/
+
+.main_professora {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  padding: 20px; /* 👈 resolve o “grudado” */
+}
+
 .teacher-area{
   display:flex;
   justify-content:center;
@@ -281,6 +295,13 @@ opacity:0.6;
   gap:10px;
 }
 
+.teacher-info p {
+  margin-bottom: 10px;  /* espaço entre parágrafos */
+  line-height: 1.6;
+  text-align: justify;
+  text-indent: 20px;
+}
+
 /* RESPONSIVO */
 @media (max-width:768px){
 
@@ -292,4 +313,103 @@ opacity:0.6;
     width:200px;
   }
 
+}
+
+
+/*GAMES */
+/* SEÇÃO */
+.games-section {
+  margin-top: 20px;
+}
+
+/* TEXTO */
+.games-section p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* GRID */
+.games-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* CARD */
+.game-card {
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* IMAGEM */
+.game-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* BOTÃO */
+.btn-play {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: #22c55e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ===== POWERLIFTING ===== */
+
+.power-section {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 10px;
+}
+
+/* TEXTO SÓ DO POWER */
+.power-section p {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* GRID */
+.power-grid {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.power-card {
+  flex: 1;
+  min-width: 120px;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.power-card h3 {
+  margin-bottom: 5px;
+}
+
+/* BOTÃO */
+.btn-power {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 12px;
+  background: #ef4444;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }

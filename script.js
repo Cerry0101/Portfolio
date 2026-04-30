@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 400);
 
   cat.addEventListener("click", () => {
-    window.location.href = "powerlift.html";
+    window.location.href = "pages/powerlift.html";
   });
 
 });
