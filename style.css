@@ -692,3 +692,31 @@ body {
   transform: scale(1.08);
   box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
 }
+
+.instagram-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #7b2ff7, #ff4ecd);
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+
+    box-shadow: 0 0 20px rgba(123, 47, 247, 0.35);
+}
+
+.instagram-btn:hover{
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 0 30px rgba(255, 78, 205, 0.5);
+}
